@@ -1,0 +1,72 @@
+{
+  "name": "request-runtime-type-checking",
+  "version": "1.0.0",
+  "description": "A clean starter for any serious TypeScript library",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "repository": "https://github.com/morintd/request-runtime-type-checking",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "lint": "eslint src --ext .ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "@types/jest": "28.1.6",
+    "@types/node": "16.11.47",
+    "@typescript-eslint/eslint-plugin": "5.33.0",
+    "@typescript-eslint/parser": "5.33.0",
+    "cspell": "6.6.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.21.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "26.8.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.30.1",
+    "eslint-plugin-testing-library": "5.6.0",
+    "husky": "8.0.1",
+    "jest": "28.1.3",
+    "lint-staged": "13.0.3",
+    "nock": "13.2.9",
+    "prettier": "2.7.1",
+    "ts-jest": "28.0.7",
+    "typescript": "4.7.4"
+  },
+  "files": [
+    "build/main",
+    "build/module",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "axios": "0.27.2",
+    "deepmerge": "4.2.2",
+    "runtypes": "6.5.1"
+  }
+}
